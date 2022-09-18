@@ -38,11 +38,12 @@ public class UserPrincipal implements UserDetails {
 
     private List<String> chronicDiseases;
 
-    private List<String> foodAllergies;
+//    private List<String> foodAllergies;
+    private String smokingStatus;
 
     private Collection<? extends GrantedAuthority> authorities;
 
-    public UserPrincipal(Long id, String username, String email, String password, String firstName, String lastName, float height, float weight, Date date, String gender, List<String> chronicDiseases, List<String> foodAllergies, Collection<? extends GrantedAuthority> authorities) {
+    public UserPrincipal(Long id, String username, String email, String password, String firstName, String lastName, float height, float weight, Date date, String gender, List<String> chronicDiseases, String smokingStatus, Collection<? extends GrantedAuthority> authorities) {
         this.id = id;
         this.username = username;
         this.email = email;
@@ -54,7 +55,7 @@ public class UserPrincipal implements UserDetails {
         this.date = date;
         this.gender = gender;
         this.chronicDiseases = chronicDiseases;
-        this.foodAllergies = foodAllergies;
+        this.smokingStatus = smokingStatus;
         this.authorities = authorities;
     }
 
@@ -75,7 +76,7 @@ public class UserPrincipal implements UserDetails {
                 user.getDate(),
                 user.getGender(),
                 user.getChronicDiseases(),
-                user.getFoodAllergies(),
+                user.getSmokingStatus(),
                 authorities
         );
     }
@@ -155,12 +156,13 @@ public class UserPrincipal implements UserDetails {
         this.chronicDiseases = chronicDiseases;
     }
 
-    public List<String> getFoodAllergies() {
-        return foodAllergies;
+
+    public String getSmokingStatus() {
+        return smokingStatus;
     }
 
-    public void setFoodAllergies(List<String> foodAllergies) {
-        this.foodAllergies = foodAllergies;
+    public void setSmokingStatus(String smokingStatus) {
+        this.smokingStatus = smokingStatus;
     }
 
     @Override

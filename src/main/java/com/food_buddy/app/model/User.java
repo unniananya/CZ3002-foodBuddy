@@ -71,8 +71,12 @@ public class User extends DateAudit {
     private List<String> chronicDiseases;
 
 
-    @Convert(converter = StringToListConverter.class)
-    private List<String> foodAllergies;
+//    @Convert(converter = StringToListConverter.class)
+//    private List<String> foodAllergies;
+
+    @NotBlank
+    @Size(max = 40)
+    private String smokingStatus;
 
 
     @ManyToMany(fetch = FetchType.LAZY)
@@ -84,7 +88,7 @@ public class User extends DateAudit {
     public User() {
     }
 
-    public User(String username, String email, String password, String firstName, String lastName, float height, float weight, Date date, String gender, List<String> chronicDiseases, List<String> foodAllergies) {
+    public User(String username, String email, String password, String firstName, String lastName, float height, float weight, Date date, String gender, List<String> chronicDiseases, String smokingStatus) {
         this.username = username;
         this.email = email;
         this.password = password;
@@ -95,7 +99,7 @@ public class User extends DateAudit {
         this.date = date;
         this.gender = gender;
         this.chronicDiseases = chronicDiseases;
-        this.foodAllergies = foodAllergies;
+        this.smokingStatus = smokingStatus;
     }
 
     public Long getId() {
@@ -186,12 +190,12 @@ public class User extends DateAudit {
         this.chronicDiseases = chronicDiseases;
     }
 
-    public List<String> getFoodAllergies() {
-        return foodAllergies;
+    public String getSmokingStatus() {
+        return smokingStatus;
     }
 
-    public void setFoodAllergies(List<String> foodAllergies) {
-        this.foodAllergies = foodAllergies;
+    public void setSmokingStatus(String smokingStatus) {
+        this.smokingStatus = smokingStatus;
     }
 
     public Set<Role> getRoles() {

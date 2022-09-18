@@ -53,8 +53,12 @@ public class SignUpRequest {
     private List<String> chronicDiseases;
 
 
-    @Convert(converter = StringToListConverter.class)
-    private List<String> foodAllergies;
+//    @Convert(converter = StringToListConverter.class)
+//    private List<String> foodAllergies;
+
+    @NotBlank
+    @Size(max = 40)
+    private String smokingStatus;
 
     public String getFirstName() {
         return firstName;
@@ -112,12 +116,12 @@ public class SignUpRequest {
         this.chronicDiseases = chronicDiseases;
     }
 
-    public List<String> getFoodAllergies() {
-        return foodAllergies;
+    public String getSmokingStatus() {
+        return smokingStatus;
     }
 
-    public void setFoodAllergies(List<String> foodAllergies) {
-        this.foodAllergies = foodAllergies;
+    public void setSmokingStatus(String smokingStatus) {
+        this.smokingStatus = smokingStatus;
     }
 
     public String getUsername() {
