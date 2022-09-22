@@ -1,3 +1,3 @@
-# CZ3006-foodBuddy
+# CZ3002-foodBuddy
 
-Backend for CZ3006 app
+Backend for CZ3002 app
