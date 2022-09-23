@@ -12,7 +12,7 @@ INSERT INTO roles(name) VALUES('ROLE_USER');
 
 INSERT INTO roles(name) VALUES('ROLE_ADMIN');
 
-4. Upload food-test.csv into MySQL as table name 'food'. Makesure the values for all nutrients are double
+4. Upload food-test.csv into MySQL as table name 'food'. Make sure the values for all nutrients are double
 5. Run application again
 
 
