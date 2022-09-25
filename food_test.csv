@@ -1,0 +1,70 @@
+﻿Id,food_name,food_group,food_sub_group,per_serving_household_measure,Energy_kcal,Dietary_fibre_g,Carbohydrate_g,Cholesterol_mg,Sodium_mg,Calcium_mg,Polyunsaturated_fat_g,Potassium_mg,Protein_g,Saturated_fat_g,Sugar_g,Total_fat_g,Trans_fat_mg,Vitamin_A_mcg,Vitamin_B2_mg,Vitamin_C_mg,Vitamin_D_IU,Water_g,Zinc_mg
+1,"2-in-1 coffee powder, with creamer",BEVERAGES,Non-alcoholic beverages,Packet (12g),56.28,0.46,7.79,0.16,23.04,12,0.04,211.68,0.82,1.95,1.28,2.44,0.11,0.72,0,0,0,0.47,0
+2,3 in 1 ready to drink coffee instant,BEVERAGES,Non-alcoholic beverages,Can (240g),81.6,0.24,14.16,3.36,112.8,43.2,0.05,326.4,2.4,1.3,14.16,1.92,0.05,5.76,0,0,0,219.84,0.48
+3,"3-in-1 coffee powder, low sugar",BEVERAGES,Non-alcoholic beverages,Sachet (17g),73.19,0.54,14.74,0,8.51,22.44,0,218.62,0.78,1.95,5.24,2.04,0,0,0,0,0,0.39,0.02
+4,Apple Juice,BEVERAGES,Non-alcoholic beverages,Glass (250ml) (250g),125,2,30,0,2.5,0,0,0,0,0,26,0,0,0,0,20,0,250,0
+5,Apple juice,BEVERAGES,Non-alcoholic beverages,Glass (250ml) (250g),125,2,30,0,2.5,12.5,0,207.5,0,0,24.75,0,0,0,0,5.75,0,221.75,0
+6,Apple juice drink,BEVERAGES,Non-alcoholic beverages,Cup (261g),104.27,0,26.36,0,23.49,10.44,0,219.24,0,0,26.36,0,0,2.61,0,117.45,0,232.03,0.26
+7,"Apple juice drink, with no added sugar",BEVERAGES,Non-alcoholic beverages,Glass (250ml) (250g),85,0.5,21.25,0,10,12.5,0,182.5,0,0,21.25,0,0,0,0,60.25,0,225.25,0
+8,Apricot nectar juice drink,BEVERAGES,Non-alcoholic beverages,Cup (265g),136.93,0,34.19,0,10.6,13.25,0,222.6,0.8,0,34.19,0,0,156.35,0,0,0,227.37,0
+9,"Beer, lager, light malt",BEVERAGES,Alcoholic beverages,Can (500g),185,0,10,0,35,20,0,160,1.5,0,10,0,0,0,0,10,0,466.5,0
+10,Benedictine D.O.M,BEVERAGES,Alcoholic beverages,Tablespoon (8g),33.28,0,2.7,0,0.16,0,0,0.16,0.02,0,1.7,0,0,0,0,0,0,5.29,0.01
+11,Black tea (no sugar),BEVERAGES,Non-alcoholic beverages,Cup (250g),2.5,0,0.25,0,2.5,2.5,0,20,0.25,0,0,0,0,0,0,0,0,249.25,0
+12,Brewed coffee,BEVERAGES,Non-alcoholic beverages,1 portion (155g),3.7,0,0.62,0,3.1,3.1,0,83.7,0.16,0,0.62,0,0,0,0,0,0,153.92,0.03
+13,Caramel macchiato,BEVERAGES,Non-alcoholic beverages,Cup (500g),523.85,0.3,50,51.25,217.1,553.65,0.9,817.05,17.3,16.7,41.15,26.3,0.3,246.7,0,4.1,52.55,396.85,2.15
+14,Celery juice,BEVERAGES,Non-alcoholic beverages,Cup (249g),29.76,0,2.99,0,219.12,89.64,0,622.5,1.49,0,2.99,0.25,0,17.43,0,9.96,0,241.03,0.75
+15,Champagne,BEVERAGES,Alcoholic beverages,Glass (250ml) (150g),96.8,0,1.5,0,15,12,0,52.5,0.3,0,1.5,0,0,0,0,4.5,0,132.45,0.15
+16,"Cheese foam bubble tea, no topping, 0% sugar",BEVERAGES,Non-alcoholic beverages,Cup (389g),0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+17,Chocolate chip frappuccino,BEVERAGES,Non-alcoholic beverages,Cup (500g),587.8,0.8,61.5,35.55,167.8,412.65,1.15,723.65,14.75,20.4,54.75,32.9,0,180.95,0,2.5,32.7,388.15,2.3
+18,Chocolate chip frappuccino with whipped cream,BEVERAGES,Non-alcoholic beverages,Cup (500g),606.05,0.8,60.8,43.3,169,415.75,1.25,724.1,14.8,21.95,54.15,35.2,0.17,221.1,0,2.45,32.1,386.3,2.3
+19,Chocolate milk bubble tea,BEVERAGES,Non-alcoholic beverages,Cup (484g),319.44,1.45,66.79,0,19.36,38.72,0.05,198.44,1.94,4.02,34.36,4.84,0,0,0,0,0,409.46,0.48
+20,Chrysanthemum tea,BEVERAGES,Non-alcoholic beverages,Bottle (500g),115,0,28.5,0,10.15,17.15,0,0,0,0,28.5,0,0,0,0,0,0,469.5,0
+21,Chrysanthemum tea (reduced sugar),BEVERAGES,Non-alcoholic beverages,Packet (250g),65.13,0,16,0,0,0,0,347.28,0,0,16,0,0,0,0,0,0,205,0
+22,Citrus carbonated water,BEVERAGES,Non-alcoholic beverages,Can (120g),43.63,0,11.16,0,18,6,0,6,0,0,11.16,0,0,0,0,0,0,108.36,0
+23,Coca Cola Coke,BEVERAGES,Non-alcoholic beverages,Can (330g),132.63,0,34.65,0,36.3,3.3,0,3.3,0,0,34.65,0,0,0,0,0,0,295.02,0
+24,Coca Cola Light,BEVERAGES,Non-alcoholic beverages,Can (330g),3.3,0,0.33,0,19.8,13.2,0,0,0.33,0,0,0,0,0,0,0,0,329.34,0.33
+25,Coconut water,BEVERAGES,Non-alcoholic beverages,Whole (250g),54.97,0,14,0,2.5,35,0,495,0,0,14,0,0,0,0,11.5,0,235,0.25
+26,Coffee and chocolate chip frappuccino,BEVERAGES,Non-alcoholic beverages,Cup (500g),416.85,0.45,41.95,30.9,142.2,349.7,0.85,600.75,11.75,14.65,38,23.45,0,153.45,0,2.3,28.7,420.05,1.7
+27,Coffee flavoured liqueur,BEVERAGES,Alcoholic beverages,Glass (250ml) (30g),97.82,0,6.27,17.4,3.6,4.8,0,9.6,0.84,3.09,6.24,4.71,0,52.8,0,0,0,13.95,0.06
+28,"Coffee powder, instant",BEVERAGES,Non-alcoholic beverages,Teaspoon (3g),10.23,0,2.2,0,3.39,5.37,0,10.8,0.35,0,0.02,0,0,0,0,0,0,0.14,0.01
+29,Cream soda,BEVERAGES,Non-alcoholic beverages,Can (330g),169.57,0,43.89,0,39.6,16.5,0,3.3,0,0,43.89,0,0,0,0,0,0,286.11,0.33
+30,Daiquiri,BEVERAGES,Alcoholic beverages,Glass (250ml) (60g),111.6,0,4.08,0,3,1.8,0.01,12.6,0.06,0,0,0.06,0,0,0,0.96,0,41.88,0.04
+31,Espresso,BEVERAGES,Non-alcoholic beverages,1 portion (30g),0.6,0,0,0,4.2,0.6,0.03,34.5,0.04,0.03,0,0.05,0,0,0,0.06,0,29.34,0.02
+32,Fruit punch,BEVERAGES,Non-alcoholic beverages,Glass (250ml) (250g),125,0.25,30.5,0,12.5,17.5,0.12,192.5,0.25,0.06,30.5,0.5,0,15,0,14,0,218.25,0.55
+33,Gin,BEVERAGES,Alcoholic beverages,Glass (250ml) (244.64g),222.71,4.65,3.23,111.37,786.13,2.45,0,0,0,0,0,0,0,0,0,0,0,162.44,0
+34,Gin tonic,BEVERAGES,Alcoholic beverages,Glass (250ml) (225g),171,0,15.75,0,9,4.5,0.01,11.25,0,0,0,0,0,0.23,0,0.9,0,193.05,0
+35,Ginger ale,BEVERAGES,Non-alcoholic beverages,Can (330g),111.21,0,28.71,0,23.1,9.9,0,3.3,0,0,28.71,0,0,0,0,0,0,300.96,0.33
+36,Green tea (no sugar),BEVERAGES,Non-alcoholic beverages,Cup (250g),5,0,0.5,0,7.5,7.5,0,67.5,0.5,0,0,0,0,0,0,0.25,0,248.5,0
+37,Green tea drink,BEVERAGES,Non-alcoholic beverages,Glass (250ml) (250g),35,0,8.75,0,7.5,2.5,0,10,0,0,8.25,0,0,0,0,14.25,0,241.25,0
+38,Green tea frappuccino,BEVERAGES,Non-alcoholic beverages,Cup (500g),244.55,0,34.7,26.1,122.4,274.8,0.25,363.25,8.3,5.7,13.3,8.8,0,123.4,0,6.9,30.85,445.95,0.95
+39,Green tea frappuccino with whipped cream,BEVERAGES,Non-alcoholic beverages,Cup (500g),268.25,0,34.55,33.65,124.4,280.3,0.35,370.35,8.45,7.4,13.55,11.45,0.15,162.4,0,6.75,30.3,443.1,1
+40,Guava nectar juice,BEVERAGES,Non-alcoholic beverages,Mug (214g),111.28,1.71,28.46,0,6.42,8.56,0.09,87.74,0.21,0.04,28.46,0.21,0,23.54,0,71.9,0,184.68,0.21
+41,Horlick dinosaur,BEVERAGES,Non-alcoholic beverages,Mug (450g),449.42,0.09,78.61,28.35,168.21,425.97,0.99,682.29,13.86,4.82,58.91,8.78,0.05,694.08,0,57.33,356.13,344.61,1.17
+42,Hot chocolate,BEVERAGES,Non-alcoholic beverages,Cup (500g),422.75,5.4,34.65,51.05,250.5,554.4,0.45,1177.05,19.95,12.8,30.1,19.95,0,241.95,0,4.85,60.35,410.95,3.45
+43,Hot chocolate with whipped cream,BEVERAGES,Non-alcoholic beverages,Cup (500g),467,5.4,34.3,51.05,250,554.4,0.45,1177.05,21,16.3,30,25.3,0.3,241.95,0,4.85,60.35,410.95,3.45
+44,Ice limau,BEVERAGES,Non-alcoholic beverages,Glass (250ml) (250g),73.25,1.45,17.58,0,13.05,26.83,0,65.13,0.5,0,3.1,0.38,0,3.85,0,12.95,0,230.95,0.05
+45,Ice teh o limau,BEVERAGES,Non-alcoholic beverages,Glass (250ml) (250g),76.88,1.5,17.85,0,2,28.6,0,83.45,0.53,0,16.45,0.4,0,4.05,0,13.6,0,230.68,0.03
+46,Ice teh o longan,BEVERAGES,Non-alcoholic beverages,Glass (250ml) (250g),74.35,0.35,18.6,0,2,5.8,0,45.8,0.2,0,18.33,0.03,0,0,0,1.85,0,230.75,0.08
+47,Ice teh o lychee,BEVERAGES,Non-alcoholic beverages,Glass (250ml) (250g),74.2,0.35,18.6,0,2,5.8,0,45.8,0.2,0,18.33,0.3,0,0,0,1.85,0,230.75,0.08
+48,Iced lemon tea,BEVERAGES,Non-alcoholic beverages,Cup (259g),87.28,0,22.02,0,7.77,5.18,0,49.21,0.26,0,22.02,0,0,0,0,0,0,236.21,0.08
+49,Kopi C,BEVERAGES,Non-alcoholic beverages,Cup (194g),87.3,0.78,14.16,3.88,48.5,69.84,0.21,199.82,2.52,1.24,14.16,2.33,0.02,48.5,0,0,0,169.75,0.19
+50,Lemon flavoured soft drink,BEVERAGES,Non-alcoholic beverages,Can (330g),149.99,0,38.61,0,42.9,9.9,0,6.6,0,0,38.61,0,0,0,0,0,0,293.04,0
+51,Lemon lime soda,BEVERAGES,Non-alcoholic beverages,Can (330g),132,0,34.32,0,36.3,6.6,0,3.3,0,0,34.32,0,0,0,0,0,0,295.35,0.33
+52,Lemonade soft drink,BEVERAGES,Non-alcoholic beverages,Can (330g),132.63,0,34.32,0,52.8,3.3,0,3.3,0,0,34.32,0,0,0,0,0,0,295.02,0
+53,Light beer,BEVERAGES,Alcoholic beverages,Can (500g),185,0,10,0,35,25,0,90,1,0,0,0,0,0,0,0,0,476,0.15
+54,Liqueur coffee,BEVERAGES,Alcoholic beverages,1 portion (30g),97.82,0,6.27,17.4,3.6,0.3,0.03,9,0.03,0.03,14.04,0.09,0,0,0,0,0,9.3,0.01
+55,Low alcohol beer / non alcoholic,BEVERAGES,Alcoholic beverages,Can (500g),50,0,5.5,0,30,15,0,120,1,0,5.5,0,0,0,0,10,0,460,0
+56,Luo han guo drink,BEVERAGES,Non-alcoholic beverages,Bottle (500g),50,0,13,0,8.4,14.8,0,0,0,0,13,0,0,0,0,0,0,486,0
+57,Manhattan,BEVERAGES,Alcoholic beverages,Glass (250ml) (57g),127.68,0,1.82,0,1.71,1.14,0,14.82,0.06,0,0,0,0,0,0,0,0,37.68,0.03
+58,"Milk tea no toppings, 0% sugar",BEVERAGES,Non-alcoholic beverages,Cup (460g),0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+59,"Milk tea no toppings, 50% sugar",BEVERAGES,Non-alcoholic beverages,Cup (500g),0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+60,"Milk tea with pearls, 0% sugar",BEVERAGES,Non-alcoholic beverages,Cup (478g),0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+61,"Milk tea with pearls, 100% sugar",BEVERAGES,Non-alcoholic beverages,Cup (500g),0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+62,"Milk tea with pearls, 50% sugar",BEVERAGES,Non-alcoholic beverages,Cup (500g),0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+63,"Milk tea, bottled",BEVERAGES,Non-alcoholic beverages,Bottle (500g),185,6,35,0,109,115,0.28,520,4.5,1.5,34.25,3,0,210,0,0,0,432.5,0.5
+64,"Milk tea, no toppings, 100% sugar",BEVERAGES,Non-alcoholic beverages,Cup (470g),0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+65,Milo Godzilla,BEVERAGES,Non-alcoholic beverages,Mug (500g),474.57,2.43,62.96,71.27,171.99,418.44,0.63,747.21,12.33,12.16,53.71,19.31,0.03,440.76,0,48.83,12.48,395.99,1.57
+66,Milo dinosaur,BEVERAGES,Non-alcoholic beverages,Mug (450g),356.9,3.02,56.12,28.13,153.41,383.18,0.32,776.07,11.3,6.39,46.44,9.72,0.05,449.91,0,68.36,5.58,360.81,1.62
+67,"Milo powder, Australia",BEVERAGES,Non-alcoholic beverages,Cup (85g),326.4,3.4,50.83,23.8,144.5,357,0.26,807.5,10.71,5.95,39.95,8.93,0,453.9,0,76.5,0,1.36,1.62
+68,"Milo, 3-in-1, powder",BEVERAGES,Non-alcoholic beverages,Sachet (30g),123.3,0.9,20.97,0.9,60,135,0.09,202.5,2.61,1.89,15.13,3.18,0.02,16.8,0,12.3,0,0.48,0.51
+69,"Milo, ready-to-drink",BEVERAGES,Non-alcoholic beverages,Packet (250g),150,1.25,23.75,1.88,75,150,0.28,158.75,4.25,1.75,20,3.75,0,23.13,0,12.5,0,214.75,0.45
