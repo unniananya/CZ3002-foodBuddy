@@ -81,51 +81,56 @@ public class FoodLogController {
         return ResponseEntity.created(location).body(new ApiResponse(true, "FoodLog saved successfully"));
     }
 
-    @GetMapping("/{userId}/todayFoodLogs")
-    public List<FoodLog> foodLogsToday(@PathVariable Long userId) throws ParseException {
-        Date date = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String currentDateStr = formatter.format(date);
-        Date currentDate = formatter.parse(currentDateStr);
-        return foodLogRepository.foodLogsToday(userId,currentDate);
-    }
-
-    @GetMapping("/{userId}/monthsFoodLogs")
-    public List<FoodLog> foodLogsLastMonth(@PathVariable Long userId) throws ParseException {
-        Date date = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String currentDateStr = formatter.format(date);
-        Date currentDate = formatter.parse(currentDateStr);
-        return foodLogRepository.foodLogsLastMonth(userId,currentDate);
-    }
-
-    @GetMapping("/{userId}/{numberOfMths}/monthsFoodLogs")
-    public List<FoodLog> foodLogsLastNoMonth(@PathVariable Long userId,@PathVariable Integer numberOfMths) throws ParseException {
-        Date date = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String currentDateStr = formatter.format(date);
-        Date currentDate = formatter.parse(currentDateStr);
-        return foodLogRepository.foodLogsLastNoMonth(userId,currentDate,numberOfMths);
-    }
+    //delete food log
+    //edit food log
 
 
-    @GetMapping("/{userId}/yearsFoodLogs")
-    public List<FoodLog> foodLogsLastYear(@PathVariable Long userId) throws ParseException {
-        Date date = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String currentDateStr = formatter.format(date);
-        Date currentDate = formatter.parse(currentDateStr);
-        return foodLogRepository.foodLogsLastYear(userId,currentDate);
-    }
+//
+//    @GetMapping("/{userId}/todayFoodLogs")
+//    public List<FoodLog> foodLogsToday(@PathVariable Long userId) throws ParseException {
+//        Date date = new Date();
+//        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//        String currentDateStr = formatter.format(date);
+//        Date currentDate = formatter.parse(currentDateStr);
+//        return foodLogRepository.foodLogsToday(userId,currentDate);
+//    }
 
-    @GetMapping("/{userId}/{numberOfYrs}/yearsFoodLogs")
-    public List<FoodLog> foodLogsLastNoYear(@PathVariable Long userId,@PathVariable Integer numberOfYrs) throws ParseException {
-        Date date = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String currentDateStr = formatter.format(date);
-        Date currentDate = formatter.parse(currentDateStr);
-        return foodLogRepository.foodLogsLastNoYear(userId,currentDate,numberOfYrs);
-    }
+//    @GetMapping("/{userId}/monthsFoodLogs")
+//    public List<FoodLog> foodLogsLastMonth(@PathVariable Long userId) throws ParseException {
+//        Date date = new Date();
+//        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//        String currentDateStr = formatter.format(date);
+//        Date currentDate = formatter.parse(currentDateStr);
+//        return foodLogRepository.foodLogsLastMonth(userId,currentDate);
+//    }
+//
+//    @GetMapping("/{userId}/{numberOfMths}/monthsFoodLogs")
+//    public List<FoodLog> foodLogsLastNoMonth(@PathVariable Long userId,@PathVariable Integer numberOfMths) throws ParseException {
+//        Date date = new Date();
+//        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//        String currentDateStr = formatter.format(date);
+//        Date currentDate = formatter.parse(currentDateStr);
+//        return foodLogRepository.foodLogsLastNoMonth(userId,currentDate,numberOfMths);
+//    }
+//
+//
+//    @GetMapping("/{userId}/yearsFoodLogs")
+//    public List<FoodLog> foodLogsLastYear(@PathVariable Long userId) throws ParseException {
+//        Date date = new Date();
+//        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//        String currentDateStr = formatter.format(date);
+//        Date currentDate = formatter.parse(currentDateStr);
+//        return foodLogRepository.foodLogsLastYear(userId,currentDate);
+//    }
+//
+//    @GetMapping("/{userId}/{numberOfYrs}/yearsFoodLogs")
+//    public List<FoodLog> foodLogsLastNoYear(@PathVariable Long userId,@PathVariable Integer numberOfYrs) throws ParseException {
+//        Date date = new Date();
+//        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//        String currentDateStr = formatter.format(date);
+//        Date currentDate = formatter.parse(currentDateStr);
+//        return foodLogRepository.foodLogsLastNoYear(userId,currentDate,numberOfYrs);
+//    }
 
 
 
