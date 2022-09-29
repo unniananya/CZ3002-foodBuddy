@@ -51,8 +51,8 @@ public class FoodLogController {
     public ResponseEntity<?> addFoodLog(@PathVariable Long userId, @Valid @RequestBody FoodLogRequest foodLogRequest) throws ParseException {
 //        @CurrentUser UserPrincipal currentUser
 
-//        User user = user  Repository.getOne(currentUser.getId());
-        User user = userRepository.findById(userId).orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));;
+//        User user = userRepository.getOne(currentUser.getId());
+        User user = userRepository.findById(userId).orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));
 
 //        Food food = foodRepository.findById(foodId).orElseThrow(() -> new ResourceNotFoundException("Food", "id", foodId));
 //
@@ -70,7 +70,7 @@ public class FoodLogController {
 
         FoodLog result = foodLogRepository.save(foodLog);
 
-        FoodNutrient foodNutrient = new FoodNutrient(currentDate,user,foodLog,food.getEnergy_kcal(),food.getDietary_fibre_g(),food.getCarbohydrate_g(),food.getCholesterol_mg(),food.getSodium_mg(),food.getCalcium_mg(),food.getPolyunsaturated_fat_g(),food.getPotassium_mg(),food.getProtein_g(),food.getSaturated_fat_g(),food.getSugar_g(),food.getTotal_fat_g(),food.getTrans_fat_mg(),food.getVitamin_A_mcg(),food.getVitamin_B2_mg(),food.getVitamin_C_mg(),food.getVitamin_D_IU(),food.getWater_g(),food.getZinc_mg());
+        FoodNutrient foodNutrient = new FoodNutrient(currentDate,user,foodLog,food.getEnergy_kcal()*foodLog.getNo_of_servings(),food.getDietary_fibre_g()*foodLog.getNo_of_servings(),food.getCarbohydrate_g()*foodLog.getNo_of_servings(),food.getCholesterol_mg()*foodLog.getNo_of_servings(),food.getSodium_mg()*foodLog.getNo_of_servings(),food.getCalcium_mg()*foodLog.getNo_of_servings(),food.getPolyunsaturated_fat_g()*foodLog.getNo_of_servings(),food.getPotassium_mg()*foodLog.getNo_of_servings(),food.getProtein_g()*foodLog.getNo_of_servings(),food.getSaturated_fat_g()*foodLog.getNo_of_servings(),food.getSugar_g()*foodLog.getNo_of_servings(),food.getTotal_fat_g()*foodLog.getNo_of_servings(),food.getTrans_fat_mg()*foodLog.getNo_of_servings(),food.getVitamin_A_mcg()*foodLog.getNo_of_servings(),food.getVitamin_B2_mg()*foodLog.getNo_of_servings(),food.getVitamin_C_mg()*foodLog.getNo_of_servings(),food.getVitamin_D_IU()*foodLog.getNo_of_servings(),food.getWater_g()*foodLog.getNo_of_servings(),food.getZinc_mg()*foodLog.getNo_of_servings());
 
         FoodNutrient result1 = foodNutrientRepository.save(foodNutrient);
 
@@ -85,15 +85,36 @@ public class FoodLogController {
     //edit food log
 
 
-//
-//    @GetMapping("/{userId}/todayFoodLogs")
-//    public List<FoodLog> foodLogsToday(@PathVariable Long userId) throws ParseException {
-//        Date date = new Date();
-//        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-//        String currentDateStr = formatter.format(date);
-//        Date currentDate = formatter.parse(currentDateStr);
-//        return foodLogRepository.foodLogsToday(userId,currentDate);
-//    }
+
+    @GetMapping("/{userId}/todayFoodLogs")
+    public List<FoodLog> foodLogsToday(@PathVariable Long userId) throws ParseException {
+        Date date = new Date();
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String currentDateStr = formatter.format(date);
+        Date currentDate = formatter.parse(currentDateStr);
+        return foodLogRepository.foodLogsToday(userId,currentDateStr);
+    }
+
+    @PutMapping("/{userId}/{foodLogId}/update")
+    public ResponseEntity<?> updateFoodLog(@PathVariable Long userId, @PathVariable Long foodLogId, @Valid @RequestBody FoodLogRequest foodLogRequest){
+        User user = userRepository.findById(userId).orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));
+
+        FoodLog foodLog = foodLogRepository.findById(foodLogId).orElseThrow(() -> new ResourceNotFoundException("FoodLog", "id", foodLogId));
+        Food food = foodRepository.findbyName(foodLogRequest.getFoodname());
+        Integer no_of_servings = foodLogRequest.getNo_of_servings();
+
+        foodLog.setFood(food);
+        foodLog.setNo_of_servings(no_of_servings);
+
+        FoodLog result = foodLogRepository.save(foodLog);
+
+        URI location = ServletUriComponentsBuilder
+                .fromCurrentContextPath().path("/{foodLogId}")
+                .buildAndExpand(result.getId()).toUri();
+
+        return ResponseEntity.created(location).body(new ApiResponse(true, "FoodLog updated successfully"));
+
+    }
 
 //    @GetMapping("/{userId}/monthsFoodLogs")
 //    public List<FoodLog> foodLogsLastMonth(@PathVariable Long userId) throws ParseException {

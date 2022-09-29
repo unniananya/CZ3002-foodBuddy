@@ -12,10 +12,10 @@ import java.util.List;
 @Repository
 public interface FoodLogRepository extends JpaRepository<FoodLog, Long> {
 
-//
-//    @Query(value="Select * from foodbuddy.foodlog u where u.user_id = ?1 and datediff(?2,u.datetime)=0")
-//    public List<FoodLog> foodLogsToday(Long userId, Date date);
-//
+
+    @Query(value="Select * from foodbuddy.foodlog u where u.user_id = ?1 and datediff(?2,u.datetime)=0", nativeQuery = true)
+    public List<FoodLog> foodLogsToday(Long userId, String date);
+
 //    @Query(value="Select * from foodbuddy.foodlog u where u.user_id = ?1 and timestampdiff(month,?2,u.datetime)=0")
 //    public List<FoodLog> foodLogsLastMonth(Long userid, Date date);
 //

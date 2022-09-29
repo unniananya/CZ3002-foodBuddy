@@ -35,3 +35,5 @@ public class FoodLogRequest {
         this.no_of_servings = no_of_servings;
     }
 }
+
+
