@@ -4,6 +4,7 @@ import com.food_buddy.app.model.audit.DateAudit;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
@@ -31,14 +32,19 @@ public class FoodLog extends DateAudit {
     @NotNull
     private Integer no_of_servings;
 
+    @NotBlank
+    private String type_of_meal;
+
     public FoodLog() {
     }
 
-    public FoodLog(Date datetime, Food food, User user, Integer no_of_servings) {
+
+    public FoodLog(Date datetime, Food food, User user, Integer no_of_servings, String type_of_meal) {
         this.datetime = datetime;
         this.food = food;
         this.user = user;
         this.no_of_servings = no_of_servings;
+        this.type_of_meal = type_of_meal;
     }
 
     public Long getId() {
@@ -79,5 +85,13 @@ public class FoodLog extends DateAudit {
 
     public void setNo_of_servings(Integer no_of_servings) {
         this.no_of_servings = no_of_servings;
+    }
+
+    public String getType_of_meal() {
+        return type_of_meal;
+    }
+
+    public void setType_of_meal(String type_of_meal) {
+        this.type_of_meal = type_of_meal;
     }
 }

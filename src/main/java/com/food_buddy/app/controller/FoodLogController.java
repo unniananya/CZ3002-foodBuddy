@@ -63,7 +63,7 @@ public class FoodLogController {
 
         Food food = foodRepository.findbyName(foodLogRequest.getFoodname());
 
-        FoodLog foodLog = new FoodLog(currentDate,food,user,foodLogRequest.getNo_of_servings());
+        FoodLog foodLog = new FoodLog(currentDate,food,user,foodLogRequest.getNo_of_servings(), foodLogRequest.getType_of_meal());
 //        foodLog.setDatetime(currentDate);
 //        foodLog.setFood(food);
 //        foodLog.setUser(user);

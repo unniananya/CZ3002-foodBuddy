@@ -19,6 +19,9 @@ public class FoodLogRequest {
     @NotNull
     private Integer no_of_servings;
 
+    @NotBlank
+    private String type_of_meal;
+
     public String getFoodname() {
         return foodname;
     }
@@ -33,6 +36,14 @@ public class FoodLogRequest {
 
     public void setNo_of_servings(Integer no_of_servings) {
         this.no_of_servings = no_of_servings;
+    }
+
+    public String getType_of_meal() {
+        return type_of_meal;
+    }
+
+    public void setType_of_meal(String type_of_meal) {
+        this.type_of_meal = type_of_meal;
     }
 }
 
