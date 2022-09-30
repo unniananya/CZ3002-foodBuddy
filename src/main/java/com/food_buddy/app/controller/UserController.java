@@ -146,7 +146,7 @@ public class UserController {
         Date currentDate = formatter.parse(currentDateStr);
 
         RecommendedNutrientIntake recommendedNutrientIntake = recommendedNutrientIntakeRepository.findLatestRec(user.getId());
-        RecommendedNutrientIntake nutrientIntake = new RecommendedNutrientIntake(user,currentDate,calories,carbohydrate,cholesterol,sodium,calcium,recommendedNutrientIntake.getPotassium_mg(),protein,sugar,recommendedNutrientIntake.getVitamin_A_mcg(),recommendedNutrientIntake.getVitamin_B2_mg(),vit_c,vit_d,recommendedNutrientIntake.getZinc_mg());
+        RecommendedNutrientIntake nutrientIntake = new RecommendedNutrientIntake(user,currentDate,calories/1000,carbohydrate,cholesterol,sodium,calcium,recommendedNutrientIntake.getPotassium_mg(),protein,sugar,recommendedNutrientIntake.getVitamin_A_mcg(),recommendedNutrientIntake.getVitamin_B2_mg(),vit_c,vit_d,recommendedNutrientIntake.getZinc_mg());
 
         RecommendedNutrientIntake result1 = recommendedNutrientIntakeRepository.save(nutrientIntake);
 

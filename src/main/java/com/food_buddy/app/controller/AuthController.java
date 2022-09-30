@@ -228,7 +228,7 @@ public class AuthController {
         String currentDateStr = formatter.format(date);
         Date currentDate = formatter.parse(currentDateStr);
 
-        RecommendedNutrientIntake nutrientIntake = new RecommendedNutrientIntake(user,currentDate,calories,carbohydrate,cholesterol,sodium,calcium,potassium,protein,sugar,vit_a,vit_b2,vit_c,vit_d,zinc);
+        RecommendedNutrientIntake nutrientIntake = new RecommendedNutrientIntake(user,currentDate,calories/1000,carbohydrate,cholesterol,sodium,calcium,potassium,protein,sugar,vit_a,vit_b2,vit_c,vit_d,zinc);
 
         RecommendedNutrientIntake result1 = recommendedNutrientIntakeRepository.save(nutrientIntake);
 
