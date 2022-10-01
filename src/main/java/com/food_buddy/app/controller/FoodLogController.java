@@ -1,10 +1,7 @@
 package com.food_buddy.app.controller;
 
 import com.food_buddy.app.exception.ResourceNotFoundException;
-import com.food_buddy.app.model.Food;
-import com.food_buddy.app.model.FoodLog;
-import com.food_buddy.app.model.FoodNutrient;
-import com.food_buddy.app.model.User;
+import com.food_buddy.app.model.*;
 import com.food_buddy.app.payload.ApiResponse;
 import com.food_buddy.app.payload.FoodLogRequest;
 import com.food_buddy.app.repository.FoodLogRepository;
@@ -87,7 +84,7 @@ public class FoodLogController {
 
 
     @GetMapping("/{userId}/todayFoodLogs")
-    public List<FoodLog> foodLogsToday(@PathVariable Long userId) throws ParseException {
+    public List<FoodLogView> foodLogsToday(@PathVariable Long userId) throws ParseException {
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String currentDateStr = formatter.format(date);
@@ -99,7 +96,7 @@ public class FoodLogController {
     public ResponseEntity<?> updateFoodLog(@PathVariable Long userId, @PathVariable Long foodLogId, @Valid @RequestBody FoodLogRequest foodLogRequest){
         User user = userRepository.findById(userId).orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));
 
-        FoodLog foodLog = foodLogRepository.findById(foodLogId).orElseThrow(() -> new ResourceNotFoundException("FoodLog", "id", foodLogId));
+        FoodLog foodLog = foodLogRepository.findById(foodLogId).orElseThrow(    () -> new ResourceNotFoundException("FoodLog", "id", foodLogId));
         Food food = foodRepository.findbyName(foodLogRequest.getFoodname());
         Integer no_of_servings = foodLogRequest.getNo_of_servings();
 
