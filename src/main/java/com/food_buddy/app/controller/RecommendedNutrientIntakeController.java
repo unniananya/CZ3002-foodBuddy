@@ -18,7 +18,7 @@ public class RecommendedNutrientIntakeController {
     @Autowired
     private RecommendedNutrientIntakeRepository recommendedNutrientIntakeRepository;
 
-    @GetMapping("/getHistory/{userId}")
+    @GetMapping("/getHistory/{userId}/{startDate}/{endDate}")
     public List<HistoricalRecommendedNutrientIntake> getRecommendedNutrientIntakeInDateRange(@PathVariable Long userId, @PathVariable String startDate, @PathVariable String endDate){
         return recommendedNutrientIntakeRepository.getRecommendedNutrientIntakeInDateRange(userId, startDate, endDate);
     }
