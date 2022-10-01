@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 public interface FoodRepository extends JpaRepository<Food, Long> {
 
-    @Query(value="Select * from foodbuddy.food u where u.food_name = ?1", nativeQuery = true)
+    @Query(value="Select * from foodbuddy.food u where binary u.food_name = ?1", nativeQuery = true)
     public Food findbyName(String foodname);
 
     @Query(value="Select * from foodbuddy.food u where u.food_name like %?1%", nativeQuery = true)
