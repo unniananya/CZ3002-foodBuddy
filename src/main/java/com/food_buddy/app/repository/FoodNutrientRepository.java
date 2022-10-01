@@ -20,40 +20,40 @@ public interface FoodNutrientRepository extends JpaRepository<FoodNutrient, Long
     public List<User_Report> getReportDate(Long userId, String date1, String date2);
 
     // ensure that end date is not in the future
-    @Query(value = "SELECT DATE(f.datetime), SUM(f.energy_kcal) FROM FoodNutrient f WHERE DATE(f.datetime) between ?2 and ?3 AND f.user_id = ?1 GROUP BY DATE(f.datetime)", nativeQuery = true)
+    @Query(value = "SELECT DATE(f.datetime) as date, SUM(f.energy_kcal) as nutrientAmount FROM FoodNutrients f WHERE DATE(f.datetime) between ?2 and ?3 AND f.user_id = ?1 GROUP BY DATE(f.datetime)", nativeQuery = true)
     public List<HistoricalNutrientData> getCaloriesInDateRange(Long userId, String startDate, String endDate);
 
-    @Query(value = "SELECT DATE(f.datetime), SUM(f.calcium_mg) FROM FoodNutrient f WHERE DATE(f.datetime) between ?2 and ?3 AND f.user_id = ?1 GROUP BY DATE(f.datetime)", nativeQuery = true)
+    @Query(value = "SELECT DATE(f.datetime) as date, SUM(f.calcium_mg) as nutrientAmount FROM FoodNutrients f WHERE DATE(f.datetime) between ?2 and ?3 AND f.user_id = ?1 GROUP BY DATE(f.datetime)", nativeQuery = true)
     public List<HistoricalNutrientData> getCalciumInDateRange (Long userId, String startDate, String endDate);
 
-    @Query(value = "SELECT DATE(f.datetime), SUM(f.carbohydrate_g) FROM FoodNutrient f WHERE DATE(f.datetime) between ?2 and ?3 AND f.user_id = ?1 GROUP BY DATE(f.datetime)", nativeQuery = true)
+    @Query(value = "SELECT DATE(f.datetime) as date, SUM(f.carbohydrate_g) as nutrientAmount FROM FoodNutrients f WHERE DATE(f.datetime) between ?2 and ?3 AND f.user_id = ?1 GROUP BY DATE(f.datetime)", nativeQuery = true)
     public List<HistoricalNutrientData> getCarbohydratesInDateRange(Long userId, String startDate, String endDate);
 
-    @Query(value = "SELECT DATE(f.datetime), SUM(f.potassium_mg) FROM FoodNutrient f WHERE DATE(f.datetime) between ?2 and ?3 AND f.user_id = ?1 GROUP BY DATE(f.datetime)", nativeQuery = true)
+    @Query(value = "SELECT DATE(f.datetime) as date, SUM(f.potassium_mg) as nutrientAmount FROM FoodNutrients f WHERE DATE(f.datetime) between ?2 and ?3 AND f.user_id = ?1 GROUP BY DATE(f.datetime)", nativeQuery = true)
     public List<HistoricalNutrientData> getPotassiumInDateRange(Long userId, String startDate, String endDate);
 
-    @Query(value = "SELECT DATE(f.datetime), SUM(f.protein_g) FROM FoodNutrient f WHERE DATE(f.datetime) between ?2 and ?3 AND f.user_id = ?1 GROUP BY DATE(f.datetime)", nativeQuery = true)
+    @Query(value = "SELECT DATE(f.datetime) as date, SUM(f.protein_g) as nutrientAmount FROM FoodNutrients f WHERE DATE(f.datetime) between ?2 and ?3 AND f.user_id = ?1 GROUP BY DATE(f.datetime)", nativeQuery = true)
     public List<HistoricalNutrientData> getProteinInDateRange(Long userId, String startDate, String endDate);
 
-    @Query(value = "SELECT DATE(f.datetime), SUM(f.sodium_mg) FROM FoodNutrient f WHERE DATE(f.datetime) between ?2 and ?3 AND f.user_id = ?1 GROUP BY DATE(f.datetime)", nativeQuery = true)
+    @Query(value = "SELECT DATE(f.datetime) as date, SUM(f.sodium_mg) as nutrientAmount FROM FoodNutrients f WHERE DATE(f.datetime) between ?2 and ?3 AND f.user_id = ?1 GROUP BY DATE(f.datetime)", nativeQuery = true)
     public List<HistoricalNutrientData> getSodiumInDateRange(Long userId, String startDate, String endDate);
 
-    @Query(value = "SELECT DATE(f.datetime), SUM(f.sugar_g) FROM FoodNutrient f WHERE DATE(f.datetime) between ?2 and ?3 AND f.user_id = ?1 GROUP BY DATE(f.datetime)", nativeQuery = true)
+    @Query(value = "SELECT DATE(f.datetime) as date, SUM(f.sugar_g) as nutrientAmount FROM FoodNutrients f WHERE DATE(f.datetime) between ?2 and ?3 AND f.user_id = ?1 GROUP BY DATE(f.datetime)", nativeQuery = true)
     public List<HistoricalNutrientData> getSugarInDateRange(Long userId, String startDate, String endDate);
 
-    @Query(value = "SELECT DATE(f.datetime), SUM(f.vitamin_a_mcg) FROM FoodNutrient f WHERE DATE(f.datetime) between ?2 and ?3 AND f.user_id = ?1 GROUP BY DATE(f.datetime)", nativeQuery = true)
+    @Query(value = "SELECT DATE(f.datetime) as date, SUM(f.vitamin_a_mcg) as nutrientAmount FROM FoodNutrients f WHERE DATE(f.datetime) between ?2 and ?3 AND f.user_id = ?1 GROUP BY DATE(f.datetime)", nativeQuery = true)
     public List<HistoricalNutrientData> getVitaminAInDateRange(Long userId, String startDate, String endDate);
 
-    @Query(value = "SELECT DATE(f.datetime), SUM(f.vitamin_b2_mg) FROM FoodNutrient f WHERE DATE(f.datetime) between ?2 and ?3 AND f.user_id = ?1 GROUP BY DATE(f.datetime)", nativeQuery = true)
+    @Query(value = "SELECT DATE(f.datetime) as date, SUM(f.vitamin_b2_mg) as nutrientAmount FROM FoodNutrients f WHERE DATE(f.datetime) between ?2 and ?3 AND f.user_id = ?1 GROUP BY DATE(f.datetime)", nativeQuery = true)
     public List<HistoricalNutrientData> getVitaminB2InDateRange(Long userId, String startDate, String endDate);
 
-    @Query(value = "SELECT DATE(f.datetime), SUM(f.vitamin_c_mg) FROM FoodNutrient f WHERE DATE(f.datetime) between ?2 and ?3 AND f.user_id = ?1 GROUP BY DATE(f.datetime)", nativeQuery = true)
+    @Query(value = "SELECT DATE(f.datetime) as date, SUM(f.vitamin_c_mg) as nutrientAmount FROM FoodNutrients f WHERE DATE(f.datetime) between ?2 and ?3 AND f.user_id = ?1 GROUP BY DATE(f.datetime)", nativeQuery = true)
     public List<HistoricalNutrientData> getVitaminCInDateRange(Long userId, String startDate, String endDate);
 
-    @Query(value = "SELECT DATE(f.datetime), SUM(f.vitamin_d_iu) FROM FoodNutrient f WHERE DATE(f.datetime) between ?2 and ?3 AND f.user_id = ?1 GROUP BY DATE(f.datetime)", nativeQuery = true)
+    @Query(value = "SELECT DATE(f.datetime) as date, SUM(f.vitamin_d_iu) as nutrientAmount FROM FoodNutrients f WHERE DATE(f.datetime) between ?2 and ?3 AND f.user_id = ?1 GROUP BY DATE(f.datetime)", nativeQuery = true)
     public List<HistoricalNutrientData> getVitaminDInDateRange(Long userId, String startDate, String endDate);
 
-    @Query(value = "SELECT DATE(f.datetime), SUM(f.zinc_mg) FROM FoodNutrient f WHERE DATE(f.datetime) between ?2 and ?3 AND f.user_id = ?1 GROUP BY DATE(f.datetime)", nativeQuery = true)
+    @Query(value = "SELECT DATE(f.datetime) as date, SUM(f.zinc_mg) as nutrientAmount FROM FoodNutrients f WHERE DATE(f.datetime) between ?2 and ?3 AND f.user_id = ?1 GROUP BY DATE(f.datetime)", nativeQuery = true)
     public List<HistoricalNutrientData> getZincInDateRange(Long userId, String startDate, String endDate);
 
 }
