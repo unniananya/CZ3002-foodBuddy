@@ -1,5 +1,6 @@
 package com.food_buddy.app.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.food_buddy.app.model.audit.DateAudit;
 import org.springframework.format.annotation.DateTimeFormat;
 
