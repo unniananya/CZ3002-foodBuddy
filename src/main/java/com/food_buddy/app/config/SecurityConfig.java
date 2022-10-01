@@ -87,6 +87,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .antMatchers("/api/user/checkUsernameAvailability", "/api/user/checkEmailAvailability")
                 .permitAll()
+                .antMatchers("/api/nutrient_intake_recommendation/getHistory/**")
+                .permitAll()
                 .antMatchers("/api/foodLog/**")
                 .permitAll()
                 .antMatchers("/api/user/**")
