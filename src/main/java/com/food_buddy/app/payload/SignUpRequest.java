@@ -49,8 +49,8 @@ public class SignUpRequest {
     private String gender;
 
 
-    @Convert(converter = StringToListConverter.class)
-    private List<String> chronicDiseases;
+//    @Convert(converter = StringToListConverter.class)
+    private String chronicDiseases;
 
 
 //    @Convert(converter = StringToListConverter.class)
@@ -108,11 +108,11 @@ public class SignUpRequest {
         this.gender = gender;
     }
 
-    public List<String> getChronicDiseases() {
+    public String getChronicDiseases() {
         return chronicDiseases;
     }
 
-    public void setChronicDiseases(List<String> chronicDiseases) {
+    public void setChronicDiseases(String chronicDiseases) {
         this.chronicDiseases = chronicDiseases;
     }
 

@@ -33,8 +33,10 @@ import javax.validation.Valid;
 import java.net.URI;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/auth")
@@ -87,10 +89,11 @@ public class AuthController {
             return new ResponseEntity(new ApiResponse(false, "Email Address already in use!"),
                     HttpStatus.BAD_REQUEST);
         }
-
+        String chronicDiseaseStr = signUpRequest.getChronicDiseases();
+        List<String> chronicDiseases = Arrays.asList(chronicDiseaseStr.split(",", -1));
         // Creating user's account
         User user = new User(signUpRequest.getUsername(),
-                signUpRequest.getEmail(), signUpRequest.getPassword(), signUpRequest.getFirstName(), signUpRequest.getLastName(), signUpRequest.getHeight(), signUpRequest.getWeight(), signUpRequest.getDate(), signUpRequest.getGender(), signUpRequest.getChronicDiseases(), signUpRequest.getSmokingStatus());
+                signUpRequest.getEmail(), signUpRequest.getPassword(), signUpRequest.getFirstName(), signUpRequest.getLastName(), signUpRequest.getHeight(), signUpRequest.getWeight(), signUpRequest.getDate(), signUpRequest.getGender(), chronicDiseases, signUpRequest.getSmokingStatus());
 
         user.setPassword(passwordEncoder.encode(user.getPassword()));
 
