@@ -2,6 +2,7 @@ package com.food_buddy.app.repository;
 
 import com.food_buddy.app.model.FoodNutrient;
 import com.food_buddy.app.model.HistoricalNutrientData;
+import com.food_buddy.app.model.TodaysNutrientIntake;
 import com.food_buddy.app.model.User_Report;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -53,5 +54,6 @@ public interface FoodNutrientRepository extends JpaRepository<FoodNutrient, Long
 
     @Query(value = "SELECT DATE(f.datetime) as date, SUM(f.zinc_mg) as nutrientAmount FROM FoodNutrients f WHERE DATE(f.datetime) between ?2 and ?3 AND f.user_id = ?1 GROUP BY DATE(f.datetime)", nativeQuery = true)
     public List<HistoricalNutrientData> getZincInDateRange(Long userId, String startDate, String endDate);
-
+    @Query(value = "SELECT SUM(f.energy_kcal) as calorieAmount, SUM(f.calcium_mg) as calciumAmount, SUM(f.carbohydrate_g) as carbohydrateAmount, SUM(f.potassium_mg) as potassiumAmount, SUM(f.protein_g) as proteinAmount, SUM(f.sodium_mg) as sodiumAmount, SUM(f.sugar_g) as sugarAmount, SUM(f.vitamin_a_mcg) as vitaminAAmount, SUM(f.vitamin_b2_mg) as vitaminBAmount, SUM(f.vitamin_c_mg) as vitaminCAmount, SUM(f.vitamin_d_iu) as vitaminDAmount, SUM(f.zinc_mg) as zincAmount FROM FoodNutrients f WHERE DATE(f.datetime) = CAST(GETDATE() AS date) AND f.user_id = ?1 GROUP BY DATE(f.datetime)")
+    public TodaysNutrientIntake getTodaysNutrientIntake(Long userId);
 }

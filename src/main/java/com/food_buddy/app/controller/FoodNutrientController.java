@@ -1,6 +1,7 @@
 package com.food_buddy.app.controller;
 
 import com.food_buddy.app.model.HistoricalNutrientData;
+import com.food_buddy.app.model.TodaysNutrientIntake;
 import com.food_buddy.app.model.User_Report;
 import com.food_buddy.app.repository.FoodNutrientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -89,6 +90,11 @@ public class FoodNutrientController {
     @GetMapping("/getHistoricalZincData/{userId}/{startDate}/{endDate}")
     public List<HistoricalNutrientData> getHistoricalZincData(@PathVariable Long userId, @PathVariable String startDate, @PathVariable String endDate) {
         return foodNutrientRepository.getZincInDateRange(userId, startDate, endDate);
+    }
+
+    @GetMapping("/getTodaysNutrientIntake/{userId}")
+    public TodaysNutrientIntake getTodayNutrientIntake(@PathVariable Long userId) {
+        return foodNutrientRepository.getTodaysNutrientIntake(userId);
     }
 
 }
