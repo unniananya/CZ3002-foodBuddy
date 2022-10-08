@@ -34,7 +34,7 @@ public class FoodController {
     @GetMapping("/getFoodRec/{userId}")
     public List<Food> getFoodRecommendation(@PathVariable Long userId){
         Date date = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         String currentDateStr = formatter.format(date);
         return foodRepository.getFoodRecommendationToday(userId,currentDateStr);
     }
