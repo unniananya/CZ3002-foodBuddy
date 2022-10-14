@@ -11,9 +11,8 @@ public class UserUpdateRequest {
 
     private float weight;
 
-    private List<String> chronicDiseases;
+    private String chronicDiseases;
 
-    @Convert(converter = StringToListConverter.class)
     private String smokingStatus;
 
 
@@ -33,11 +32,11 @@ public class UserUpdateRequest {
         this.weight = weight;
     }
 
-    public List<String> getChronicDiseases() {
+    public String getChronicDiseases() {
         return chronicDiseases;
     }
 
-    public void setChronicDiseases(List<String> chronicDiseases) {
+    public void setChronicDiseases(String chronicDiseases) {
         this.chronicDiseases = chronicDiseases;
     }
 

@@ -162,59 +162,16 @@ public class User extends DateAudit {
         return height;
     }
 
-    public void setHeight(float height) throws ParseException {
-//        this.height = height;
-//
-//        Date date = new Date();
-//        long difference_In_Time = date.getTime() - this.date.getTime();
-//        long age = (difference_In_Time / (1000l * 60 * 60 * 24 * 365));
-//
-//        double calories = 0;
-//        if (this.gender == "Male"){
-//            calories = 13.397*this.weight+ 4.799*height - 5.677*age + 88.362;
-//        }
-//        else{
-//            calories = 9.247*this.weight + 3.098*height - 4.330*age + 447.593;
-//        }
-//
-//        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-//        String currentDateStr = formatter.format(date);
-//        Date currentDate = formatter.parse(currentDateStr);
-//
-//        RecommendedNutrientIntake recommendedNutrientIntake = recommendedNutrientIntakeRepository.findLatestRec(this.id);
-//
-//        RecommendedNutrientIntake nutrientIntake = new RecommendedNutrientIntake(this,currentDate,calories,recommendedNutrientIntake.getCarbohydrate_g(),recommendedNutrientIntake.getCholesterol_mg(),recommendedNutrientIntake.getSodium_mg(),recommendedNutrientIntake.getCalcium_mg(),recommendedNutrientIntake.getPotassium_mg(),recommendedNutrientIntake.getProtein_g(),recommendedNutrientIntake.getSugar_g(),recommendedNutrientIntake.getVitamin_A_mcg(),recommendedNutrientIntake.getVitamin_B2_mg(),recommendedNutrientIntake.getVitamin_C_mg(),recommendedNutrientIntake.getVitamin_D_IU(),recommendedNutrientIntake.getZinc_mg());
-//
-//        RecommendedNutrientIntake result1 = recommendedNutrientIntakeRepository.save(nutrientIntake);
+    public void setHeight(float height){
+        this.height = height;
     }
 
     public float getWeight() {
         return weight;
     }
 
-    public void setWeight(float weight) throws ParseException {
+    public void setWeight(float weight){
         this.weight = weight;
-
-//        Date date = new Date();
-//        long difference_In_Time = date.getTime() - this.date.getTime();
-//        long age = (difference_In_Time / (1000l * 60 * 60 * 24 * 365));
-//
-//        double calories = 0;
-//        if (this.gender == "Male"){
-//            calories = 13.397*weight+ 4.799*this.height - 5.677*age + 88.362;
-//        }
-//        else{
-//            calories = 9.247*weight + 3.098*this.height - 4.330*age + 447.593;
-//        }
-//
-//        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-//        String currentDateStr = formatter.format(date);
-//        Date currentDate = formatter.parse(currentDateStr);
-//
-//        RecommendedNutrientIntake recommendedNutrientIntake = recommendedNutrientIntakeRepository.findLatestRec(this.id);
-//
-//        RecommendedNutrientIntake nutrientIntake = new RecommendedNutrientIntake(this,currentDate,calories,recommendedNutrientIntake.getCarbohydrate_g(),recommendedNutrientIntake.getCholesterol_mg(),recommendedNutrientIntake.getSodium_mg(),recommendedNutrientIntake.getCalcium_mg(),recommendedNutrientIntake.getPotassium_mg(),recommendedNutrientIntake.getProtein_g(),recommendedNutrientIntake.getSugar_g(),recommendedNutrientIntake.getVitamin_A_mcg(),recommendedNutrientIntake.getVitamin_B2_mg(),recommendedNutrientIntake.getVitamin_C_mg(),recommendedNutrientIntake.getVitamin_D_IU(),recommendedNutrientIntake.getZinc_mg());
-//        RecommendedNutrientIntake result1 = recommendedNutrientIntakeRepository.save(nutrientIntake);
     }
 
     public Date getDate() {

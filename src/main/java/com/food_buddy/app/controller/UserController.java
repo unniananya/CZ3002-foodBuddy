@@ -16,7 +16,9 @@ import javax.validation.Valid;
 import java.net.URI;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/user")
@@ -41,7 +43,8 @@ public class UserController {
 
         user.setHeight(userUpdateRequest.getHeight());
         user.setWeight(userUpdateRequest.getWeight());
-        user.setChronicDiseases(userUpdateRequest.getChronicDiseases());
+        List<String> chronicDiseases = Arrays.asList(userUpdateRequest.getChronicDiseases().split(",", -1));
+        user.setChronicDiseases(chronicDiseases);
         user.setSmokingStatus(userUpdateRequest.getSmokingStatus());
 
         User result = userRepository.save(user);
