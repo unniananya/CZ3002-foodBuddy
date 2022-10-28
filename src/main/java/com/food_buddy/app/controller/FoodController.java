@@ -31,12 +31,17 @@ public class FoodController {
         return foodRepository.searchFood(keyword);
     }
 
-    @GetMapping("/getFoodRec/{userId}")
+    @GetMapping("/getFoodRecBeverages/{userId}")
     public List<Food> getFoodRecommendation(@PathVariable Long userId){
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         String currentDateStr = formatter.format(date);
-        return foodRepository.getFoodRecommendationToday(userId,currentDateStr);
+        if (foodRepository.getFoodRecommendationBeverages(userId, currentDateStr).size() == 0){
+            return foodRepository.getFoodRecommendationBeverages1(userId);
+        }
+        else {
+            return foodRepository.getFoodRecommendationBeverages(userId, currentDateStr);
+        }
     }
 
 }
