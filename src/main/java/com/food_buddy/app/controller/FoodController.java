@@ -32,7 +32,7 @@ public class FoodController {
     }
 
     @GetMapping("/getFoodRecBeverages/{userId}")
-    public List<Food> getFoodRecommendation(@PathVariable Long userId){
+    public List<Food> getBeveragesFoodRecommendation(@PathVariable Long userId){
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         String currentDateStr = formatter.format(date);
@@ -41,6 +41,19 @@ public class FoodController {
         }
         else {
             return foodRepository.getFoodRecommendationBeverages(userId, currentDateStr);
+        }
+    }
+
+    @GetMapping("/getFoodRecMain/{userId}")
+    public List<Food> getMainsFoodRecommendation(@PathVariable Long userId){
+        Date date = new Date();
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        String currentDateStr = formatter.format(date);
+        if (foodRepository.getFoodRecommendationMains(userId, currentDateStr).size() == 0){
+            return foodRepository.getFoodRecommendationMains1(userId);
+        }
+        else {
+            return foodRepository.getFoodRecommendationMains(userId, currentDateStr);
         }
     }
 
