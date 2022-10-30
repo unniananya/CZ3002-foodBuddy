@@ -1,6 +1,7 @@
 package com.food_buddy.app.controller;
 
 import com.food_buddy.app.model.HistoricalRecommendedNutrientIntake;
+import com.food_buddy.app.model.RecommendedNutrientIntake;
 import com.food_buddy.app.repository.RecommendedNutrientIntakeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,7 +14,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/nutrient_intake_recommendation")
-
 public class RecommendedNutrientIntakeController {
     @Autowired
     private RecommendedNutrientIntakeRepository recommendedNutrientIntakeRepository;
@@ -21,5 +21,10 @@ public class RecommendedNutrientIntakeController {
     @GetMapping("/getHistory/{userId}/{startDate}/{endDate}")
     public List<HistoricalRecommendedNutrientIntake> getRecommendedNutrientIntakeInDateRange(@PathVariable Long userId, @PathVariable String startDate, @PathVariable String endDate){
         return recommendedNutrientIntakeRepository.getRecommendedNutrientIntakeInDateRange(userId, startDate, endDate);
+    }
+
+    @GetMapping("/getLatestRec/{userId}")
+    public HistoricalRecommendedNutrientIntake findLatestRec(@PathVariable Long userId){
+        return recommendedNutrientIntakeRepository.findLatestRec1(userId);
     }
 }
